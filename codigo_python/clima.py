@@ -1,4 +1,3 @@
-# Arquivo: clima.py
 import requests
 
 
@@ -25,7 +24,6 @@ def verificar_previsao_chuva(latitude: float, longitude: float) -> bool:
         print(
             f"  -> Probabilidades de chuva para as próximas 6h: {proximas_6_horas}%")
 
-        # Lógica: Se qualquer hora tiver mais de 50% de chance, considera-se previsão de chuva.
         for prob in proximas_6_horas:
             if prob > 50:
                 print("  -> ALERTA: Alta probabilidade de chuva detectada!")
