@@ -19,10 +19,11 @@
 <a id="equipe"></a>
 ## 1. Equipe
 
-* **Enzo Gloria** – RM567599
-* **[Nome do Colega 2]** – [RM do Colega 2]
-* **[Nome do Colega 3]** – [RM do Colega 3]
-* *(Adicionar outros membros se houver)*
+* **ENZO NUNES CASTANHEIRA GLORIA DA SILVA** – RM567599
+* **LARISSA NUNES MOREIRA REIS** – RM568280
+* **PEDRO HENRIQUE LOPES DOS SANTOS** – RM568359
+* **FABRICIO MOUZER BRITO** – RM566777
+* **GABRIEL RAPOZO GUIMARÃES SOARES** – RM568480
 
 ---
 
