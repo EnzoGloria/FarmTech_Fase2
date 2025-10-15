@@ -1,15 +1,12 @@
-# Arquivo: cerebro_irrigacao.py
 import time
 import json
 import csv
 from datetime import datetime
 from pathlib import Path
 
-# Importa a função específica do nosso arquivo clima.py, que está na mesma pasta.
 from clima import verificar_previsao_chuva
 
-# --- PARÂMETROS GLOBAIS E CONFIGURAÇÕES ---
-# Utilizando os parâmetros calibrados durante os testes.
+
 PARAMETROS_CULTURA = {
     "Soja": {
         "umidade_min": 35.0,
@@ -24,11 +21,9 @@ PARAMETROS_CULTURA = {
         "nutriente_essencial": "k"
     }
 }
-# Cria um caminho absoluto para o arquivo CSV, garantindo que ele seja sempre salvo na mesma pasta do script.
+
 CAMINHO_DO_SCRIPT = Path(__file__).parent
 NOME_ARQUIVO_LOG = CAMINHO_DO_SCRIPT / "historico_irrigacao.csv"
-
-# --- FUNÇÕES AUXILIARES E PRINCIPAIS ---
 
 
 def escolher_cultura() -> str:
@@ -75,11 +70,9 @@ def registrar_dados(nome_arquivo: str, dados_sensores: dict, decisao: str):
     """
     Salva uma nova linha em um arquivo CSV, escrevendo o cabeçalho apenas se o arquivo for novo.
     """
-    # <<< ALTERAÇÃO AQUI >>>
-    # Usamos o objeto Path que já tínhamos para verificar de forma robusta se o arquivo existe e não está vazio.
+
     arquivo_path = Path(nome_arquivo)
 
-    # A condição para escrever o cabeçalho é: o arquivo não existe OU ele existe mas está vazio (tamanho 0).
     escrever_cabecalho = not arquivo_path.exists() or arquivo_path.stat().st_size == 0
 
     cabecalho = ['timestamp', 'n', 'p', 'k', 'ph', 'umidade', 'acao_bomba']
@@ -90,25 +83,19 @@ def registrar_dados(nome_arquivo: str, dados_sensores: dict, decisao: str):
     }
 
     try:
-        # Abrimos o arquivo em modo 'a' (append)
         with open(arquivo_path, 'a', newline='', encoding='utf-8') as f:
             escritor = csv.DictWriter(f, fieldnames=cabecalho)
 
-            # Escrevemos o cabeçalho apenas se a nossa condição for verdadeira
             if escrever_cabecalho:
                 escritor.writeheader()
 
-            # Escrevemos a nova linha de dados
             escritor.writerow(nova_linha)
 
     except IOError as e:
         print(f"  -> ERRO ao escrever no arquivo CSV: {e}")
 
-# --- BLOCO DE EXECUÇÃO PRINCIPAL ---
-
 
 def main():
-    # Definindo as coordenadas da nossa fazenda virtual em Cuiabá, MT.
     LATITUDE_FAZENDA = -15.6010
     LONGITUDE_FAZENDA = -56.0974
 
