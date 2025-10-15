@@ -57,9 +57,8 @@ A bomba é acionada somente se **todas** as seguintes condições forem atendida
 
 A imagem abaixo demonstra as conexões dos componentes utilizados na simulação.
 
-*▶️ **AÇÃO AQUI:** Façam o upload da imagem `Captura de tela 2025-10-07 234939.png` para o GitHub e substituam o `link_da_imagem_aqui.png` pelo link real.*
 
-![Circuito do Wokwi](link_da_imagem_aqui.png)
+![Circuito do Wokwi](imagens/circuito_wokwi.png)
 
 ---
 
@@ -81,9 +80,8 @@ Todos os códigos-fonte desenvolvidos (C/C++, Python e R) estão organizados nas
 
 O sistema foi integrado com sucesso à API Open-Meteo. O módulo `clima.py` consulta a previsão de chuva para as próximas 6 horas para a cidade de Cuiabá-MT. Caso a probabilidade seja alta, a irrigação é suspensa para economizar água, adicionando uma camada extra de inteligência ao sistema.
 
-*▶️ **AÇÃO AQUI:** Insiram o print `image_4e55e6.png` aqui e atualizem o link.*
 
-![Consulta à API de Clima](link_da_imagem_aqui.png)
+![Consulta à API de Clima](imagens/consulta_API.png)
 
 ### Opcional 2: Análise Estatística em R
 
@@ -91,9 +89,8 @@ Utilizamos os dados de log gerados pela simulação (`historico_irrigacao.csv`) 
 
 Após um ciclo de depuração e balanceamento dos dados de teste, a análise revelou que o fator mais determinante nos dados coletados foi a presença do nutriente Nitrogênio (N). A árvore gerada confirmou visualmente que a presença deste nutriente era a principal condição que levava à decisão de "LIGAR", validando a importância da nossa lógica programada.
 
-*▶️ **AÇÃO AQUI:** Façam o upload da imagem final da árvore de decisão (`image_1b0369.png`) e atualizem o link aqui.*
 
-![Árvore de Decisão Final](link_da_imagem_aqui.png)
+![Árvore de Decisão Final](imagens/arvore_de_decisao.png)
 
 ---
 
