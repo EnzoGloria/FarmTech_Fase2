@@ -111,6 +111,5 @@ Após um ciclo de depuração e balanceamento dos dados de teste, a análise rev
 
 Um vídeo completo de até 5 minutos, demonstrando o funcionamento de todo o sistema, está disponível no YouTube.
 
-*▶️ **AÇÃO AQUI:** Após gravarem e subirem o vídeo para o YouTube (como "Não Listado"), colem o link aqui.*
 
-**Link do Vídeo:** [Aguardando link da equipe]
+**Link do Vídeo:** [Clique aqui para assistir à demonstração](https://youtu.be/fXyUp7KEpkM)
